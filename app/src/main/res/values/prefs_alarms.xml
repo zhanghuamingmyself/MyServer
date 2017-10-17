@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2017 Phillip Hsu
+  ~
+  ~ This file is part of ClockPlus.
+  ~
+  ~ ClockPlus is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ ClockPlus is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with ClockPlus.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+    <string name="title_category_alarms">闹钟</string>
+
+    <!-- Time picker style -->
+    <string name="key_time_picker_style">时间选择器风格</string>
+    <string name="title_time_picker_style">时间选择器风格</string>
+    <string name="system_default">系统默认</string>
+    <!-- Internally, we refer to this picker as a numpad because it's concise.
+    However, "numeric keypad" is more descriptive when describing the style to users. -->
+    <string name="number_pad">数字键盘</string>
+    <string name="grid_selector">网格模式</string>
+    <string-array name="array_time_picker_styles">
+        <item>@string/system_default</item>
+        <item>@string/number_pad</item>
+        <item>@string/grid_selector</item>
+    </string-array>
+
+    <!-- Silence after -->
+    <string name="key_silence_after">静音时间</string>
+    <string name="title_silence_after">静音时间</string>
+    <!-- Snooze duration -->
+    <string name="key_snooze_duration">小睡延时</string>
+    <string name="title_snooze_duration">小睡延时</string>
+    <!-- Durations for silence after & snooze duration -->
+    <string-array name="entries_duration">
+        <item>1 分</item>
+        <item>5 分</item>
+        <item>10 分</item>
+        <item>15 分</item>
+        <item>20 分</item>
+        <item>25 分</item>
+        <item>30 分</item>
+    </string-array>
+    <string-array name="values_duration">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+    <!-- Alarm volume -->
+    <string name="key_alarm_volume">key_alarm_volume</string>
+    <string name="title_alarm_volume">音量调节</string>
+
+    <!-- Upcoming alarm threshold -->
+    <string name="key_notify_me_of_upcoming_alarms">key_notify_me_of_upcoming_alarms</string>
+    <string name="title_notify_me_of_upcoming_alarms">提前通知我将来临的闹钟</string>
+    <string-array name="entries_notify_me_of_upcoming_alarms">
+        <item>从不</item>
+        <item>前1小时</item>
+        <item>前2 小时 </item>
+        <item>前3 小时 </item>
+        <item>前4 小时 </item>
+        <item>前5 小时 </item>
+        <item>前6 小时 </item>
+        <item>前7 小时 </item>
+        <item>前8 小时 </item>
+    </string-array>
+    <string-array name="values_notify_me_of_upcoming_alarms">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <!-- First day of week -->
+    <string name="key_first_day_of_week">一周的第一天</string>
+    <string name="title_first_day_of_week">一周的第一天</string>
+    <string name="saturday">星期六</string>
+    <string name="sunday">星期日</string>
+    <string name="monday">星期一</string>
+    <string name="value_saturday">6</string>
+    <string name="value_sunday">0</string>
+    <string name="value_monday">1</string>
+    <string-array name="entries_first_day_of_week">
+        <item>@string/saturday</item>
+        <item>@string/sunday</item>
+        <item>@string/monday</item>
+    </string-array>
+    <string-array name="values_first_day_of_week">
+        <item>@string/value_saturday</item>
+        <item>@string/value_sunday</item>
+        <item>@string/value_monday</item>
+    </string-array>
+</resources>

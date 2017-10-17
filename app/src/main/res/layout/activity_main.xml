@@ -1,0 +1,256 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <ImageView
+        android:id="@+id/btn_operator"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/play"
+        android:text="启动服务" />
+
+    <ImageView
+        android:id="@+id/btn_set"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@id/btn_operator"
+        android:src="@drawable/ic_settings_24dp"
+        android:text="启动服务" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IP 地址：" />
+
+        <TextView
+            android:id="@+id/ipv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ip address" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="包名: "
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="hello_world"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="信息: "
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="hello_world"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/btn_timer"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/timer" />
+
+
+            <ImageView
+                android:id="@+id/btn_plugin"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn_timer"
+                android:layout_margin="5dp"
+                android:src="@drawable/plugin"
+                android:text="插件选择" />
+
+
+            <ImageView
+                android:id="@+id/iv_main"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="500dp"
+                android:layout_toRightOf="@id/btn_timer"
+                android:src="@drawable/erweima" />
+
+            <RelativeLayout
+                android:id="@+id/funtion_weater"
+                android:layout_width="300dp"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btn_plugin"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/weather_img"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dip"
+                    android:focusable="false" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/weather_img">
+
+                    <TextView
+                        android:id="@+id/week_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="5dip"
+                        android:layout_marginLeft="10dip"
+                        android:focusable="false"
+                        android:text="week_today"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/week_today"
+                        android:layout_margin="5dip"
+                        android:layout_marginLeft="10dip"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:fadingEdgeLength="10dip"
+                        android:focusable="false"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:text="temperature"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/climate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/temperature"
+                        android:layout_margin="5dip"
+                        android:layout_marginLeft="10dip"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:fadingEdgeLength="10dip"
+                        android:focusable="false"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:text="climate"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/wind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/climate"
+                        android:layout_margin="5dip"
+                        android:layout_marginLeft="10dip"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:fadingEdgeLength="10dip"
+                        android:focusable="false"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:text="wind"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.zhanghuaming.myserver.util.GifView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btn_gif"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/funtion_weater" />
+
+            <ImageView
+                android:id="@+id/btn_erweima"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/funtion_weater"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/btn_gif"
+                android:src="@drawable/voice" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
