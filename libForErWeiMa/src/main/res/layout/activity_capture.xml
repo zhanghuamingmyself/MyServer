@@ -109,5 +109,14 @@
             android:layout_alignRight="@+id/capture_mask_right"
             android:layout_alignEnd="@+id/capture_mask_right" />
 
+        <Button
+            android:id="@+id/flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:text="闪光灯" />
+
     </RelativeLayout>
 </RelativeLayout>

@@ -52,8 +52,8 @@ public class CameraManager {
     private boolean initialized;
     private boolean previewing;
     private int requestedCameraId = -1;
-  //  private Camera theCamera = camera;
-   // private Camera.Parameters parameters = theCamera.getParameters();
+    //  private Camera theCamera = camera;
+    // private Camera.Parameters parameters = theCamera.getParameters();
 
     public CameraManager(Context context) {
         this.context = context;
@@ -203,7 +203,7 @@ public class CameraManager {
         return null;
     }
 
-  /*  public void flashHandle() {
+    public void flashHandle() {
         Camera theCamera = camera;
         Camera.Parameters parameters = theCamera.getParameters();
         // Policy.Parameters parameters= (Policy.Parameters) camera.getParameters();
@@ -228,8 +228,14 @@ public class CameraManager {
 
     }
 
-private  static CameraManager camer;
-    public static CameraManager get() {
-       return camer;
-    }*/
+    private static CameraManager camer;
+
+    public static CameraManager get(Context context) {
+        if (camer != null)
+            return camer;
+        else {
+            camer = new CameraManager(context);
+            return camer;
+        }
+    }
 }

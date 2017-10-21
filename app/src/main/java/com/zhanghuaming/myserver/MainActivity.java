@@ -137,6 +137,8 @@ public class MainActivity extends BaseActivity {
                             startActivity(intent);
                         } catch (Exception e) {
                             e.printStackTrace();
+                        }finally {
+                            mHandler.sendEmptyMessage(Constant.MSG_RECOGNIZE_START);
                         }
                     } else if(sayResult.startsWith("你好")){
                         tvMessage.setText("暂停识别");
@@ -257,6 +259,7 @@ public class MainActivity extends BaseActivity {
 
         new GetWeatherTask("中山").execute();// 启动更新天气进程
         timer=new VoiceEnableTimer();
+        timer.setEnable(true);
         timer.setOkBack(new OkBack() {
             @Override
             public void back(String str) {

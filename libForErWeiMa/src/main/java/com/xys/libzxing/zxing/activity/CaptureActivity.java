@@ -30,6 +30,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -101,6 +102,14 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         animation.setRepeatCount(-1);
         animation.setRepeatMode(Animation.RESTART);
         scanLine.startAnimation(animation);
+        Button button1=(Button)findViewById(R.id.flash);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CameraManager.get(CaptureActivity.this).flashHandle();
+            }
+        });
+
     }
 
     @Override
@@ -301,12 +310,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         }
         return 0;
     }
-   /* public  void myflash()
-    {
-        Button button1=(Button)findViewById(R.id.button);
-                CameraManager.get().flashHandle();
 
-    }*/
     public  void myback(View  v)
     {
 
